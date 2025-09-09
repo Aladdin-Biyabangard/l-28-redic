@@ -6,15 +6,15 @@ import lombok.experimental.FieldDefaults;
 
 import static lombok.AccessLevel.PRIVATE;
 
-@FieldDefaults(level = PRIVATE)
-@AllArgsConstructor
 @Data
-public class UserResponse {
+@AllArgsConstructor
+@NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class UserResponse implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     Long id;
-
     String userName;
-
     String email;
-
 }
